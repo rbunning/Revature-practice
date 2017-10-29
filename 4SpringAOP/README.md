@@ -1,2 +1,2 @@
-# Spring Aspect Object Programming
-
+# Spring Object Relation Mapping
+# using Hibernate

@@ -47,7 +47,9 @@ public class Driver {
 
 		/* READ */
 		print();
-
+		
+		System.out.println(app.SchoolUserWithUsename("tum"));
+		
 	}
 
 	private static void print() {

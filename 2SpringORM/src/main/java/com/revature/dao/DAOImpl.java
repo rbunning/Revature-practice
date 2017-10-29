@@ -2,6 +2,7 @@ package com.revature.dao;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -49,6 +50,13 @@ public class DAOImpl implements DAO {
 	public void deleteSchoolUserByID(SchoolUser a_user) {
 		Session session = sessionFactory.getCurrentSession();
 		session.delete(a_user);
+	}
+
+	@Override
+	public SchoolUser getSchoolUserbyUsername(String a_username) {
+		Session session = sessionFactory.getCurrentSession();
+		return (SchoolUser) session.createCriteria(SchoolUser.class)
+				.add(Restrictions.eq("userName", a_username)).uniqueResult();
 	}
 	
 }

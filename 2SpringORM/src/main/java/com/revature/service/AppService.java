@@ -43,5 +43,9 @@ public class AppService {
 	public void deleteSchoolUser(SchoolUser a_user) {
 		dao.deleteSchoolUserByID(a_user);
 	}
+	
+	public SchoolUser SchoolUserWithUsename(String a_username) {
+		return dao.getSchoolUserbyUsername(a_username);
+	}
 
 }
